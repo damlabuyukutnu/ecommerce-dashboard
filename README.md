@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Northwind Admin — E-commerce Dashboard
+
+A modern, fully interactive e-commerce admin dashboard built as a portfolio project. It demonstrates a realistic SaaS-style admin panel — product catalog management, order tracking, customer insights, and analytics — powered entirely by mock data on the client, with no backend required.
+
+**Live demo:** _add your Vercel URL here_
+**Screenshots:** _add screenshots here_
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Recharts](https://recharts.org) for charts
+- [Lucide React](https://lucide.dev) for icons
+
+## Features
+
+- **Dashboard** — revenue, orders, products, and customer KPIs with period-over-period change, a monthly revenue chart, recent orders, top-selling products, and an order status breakdown.
+- **Products** — searchable, filterable product catalog with stock indicators, and full create / edit / delete flows with validated forms and toast feedback.
+- **Orders** — order list with status filtering, a detail view with line items, and inline order status updates.
+- **Customers** — searchable customer list with a detail view showing order history and lifetime spend.
+- **Analytics** — revenue and order trends across selectable time ranges (7 days, 30 days, 90 days, 12 months) with supporting KPIs.
+- **Settings** — editable profile, store information, and interface preferences.
+
+All data mutations (products, order statuses, settings) persist to `localStorage`, so changes survive a page refresh. Search, filtering, pagination, form validation, and delete confirmations are fully functional — this is not a static mockup.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Other scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # production build
+npm run start   # run the production build locally
+npm run lint    # run ESLint
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├─ app/                  # App Router routes (grouped under (dashboard))
+├─ components/
+│  ├─ ui/                # Reusable primitives: Button, Modal, Badge, Input, etc.
+│  ├─ layout/             # Sidebar, Header, DashboardShell
+│  ├─ dashboard/          # Dashboard-specific widgets
+│  ├─ products/           # Product table, filters, form modal
+│  ├─ orders/              # Order table, filters, detail modal
+│  ├─ customers/           # Customer table, detail modal
+│  ├─ analytics/           # Analytics charts and controls
+│  └─ settings/            # Profile, store, and preference forms
+├─ context/               # Client-side app data store (products, orders, customers, settings)
+├─ lib/                   # Mock data, metrics calculations, formatting, storage helpers
+├─ hooks/                 # Reusable hooks (pagination, hydration)
+└─ types/                 # Shared TypeScript types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push this repository to GitHub.
+2. Import the repository on [Vercel](https://vercel.com/new).
+3. No environment variables are required — deploy with the default settings.
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project uses mock, in-memory data seeded on first load and persisted to `localStorage` afterward. There is no real backend, authentication, or payment processing — it is intended purely as a frontend showcase.

@@ -2,9 +2,6 @@
 
 A modern, fully interactive e-commerce admin dashboard built as a portfolio project. It demonstrates a realistic SaaS-style admin panel — product catalog management, order tracking, customer insights, and analytics — powered entirely by mock data on the client, with no backend required.
 
-**Live demo:** _add your Vercel URL here_
-**Screenshots:** _add screenshots here_
-
 ## Tech Stack
 
 - [Next.js](https://nextjs.org) (App Router)
@@ -44,22 +41,22 @@ npm run lint    # run ESLint
 
 ## Project Structure
 
-```
+```text
 src/
-├─ app/                  # App Router routes (grouped under (dashboard))
+├─ app/           # App Router routes (grouped under (dashboard))
 ├─ components/
-│  ├─ ui/                # Reusable primitives: Button, Modal, Badge, Input, etc.
-│  ├─ layout/             # Sidebar, Header, DashboardShell
-│  ├─ dashboard/          # Dashboard-specific widgets
-│  ├─ products/           # Product table, filters, form modal
-│  ├─ orders/              # Order table, filters, detail modal
-│  ├─ customers/           # Customer table, detail modal
-│  ├─ analytics/           # Analytics charts and controls
-│  └─ settings/            # Profile, store, and preference forms
-├─ context/               # Client-side app data store (products, orders, customers, settings)
-├─ lib/                   # Mock data, metrics calculations, formatting, storage helpers
-├─ hooks/                 # Reusable hooks (pagination, hydration)
-└─ types/                 # Shared TypeScript types
+│  ├─ ui/         # Reusable primitives: Button, Modal, Badge, Input, etc.
+│  ├─ layout/     # Sidebar, Header, DashboardShell
+│  ├─ dashboard/  # Dashboard-specific widgets
+│  ├─ products/   # Product table, filters, form modal
+│  ├─ orders/     # Order table, filters, detail modal
+│  ├─ customers/  # Customer table, detail modal
+│  ├─ analytics/  # Analytics charts and controls
+│  └─ settings/   # Profile, store, and preference forms
+├─ context/       # Client-side app data store (products, orders, customers, settings)
+├─ lib/           # Mock data, metrics calculations, formatting, storage helpers
+├─ hooks/         # Reusable hooks (pagination, hydration)
+└─ types/         # Shared TypeScript types
 ```
 
 ## Deploying to Vercel

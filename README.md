@@ -2,6 +2,26 @@
 
 A modern, fully interactive e-commerce admin dashboard built as a portfolio project. It demonstrates a realistic SaaS-style admin panel — product catalog management, order tracking, customer insights, and analytics — powered entirely by mock data on the client, with no backend required.
 
+**Live demo:** [ecommerce-dashboard-one-kappa.vercel.app](https://ecommerce-dashboard-one-kappa.vercel.app)
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Products
+
+![Products](screenshots/products.png)
+
+### Orders
+
+![Orders](screenshots/orders.png)
+
+### Analytics
+
+![Analytics](screenshots/analytics.png)
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org) (App Router)
